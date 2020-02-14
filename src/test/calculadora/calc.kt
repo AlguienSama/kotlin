@@ -51,6 +51,17 @@ fun main() {
     asc.forEach { print("$it - ") }
     println()
 
+    for ((index, value) in asc.withIndex()) {
+        println("the element at $index is $value")
+    }
+
+    val nums: MutableList<Int> = mutableListOf(1, 2, 3)
+    nums.forEach { print("$it - ") }
+    println()
+    nums.add(3, 4)
+    nums.forEach { print("$it - ") }
+    println()
+
     val text = """
         Text
         Long
@@ -95,7 +106,7 @@ fun getStringLength(obj: Any): Int? {
 
 fun describe(obj: Any): String =
     when (obj) {
-        1          -> "One"
+        1,2        -> "One or two"
         "Hello"    -> "Greeting"
         is Long    -> "Long"
         !is String -> "Not a string"
