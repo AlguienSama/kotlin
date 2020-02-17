@@ -3,11 +3,12 @@ package exBanco.bank
 import java.util.ArrayList
 import kotlin.collections.ArrayList
 
-class Cliente {
-    private lateinit var nombre:String
+class Cliente(nombre:String) {
+    private var nombre:String = nombre
     private lateinit var id:String
-    private var ArrayList
-    inner class Cuenta {
+    private var ArrayList<Cuenta>: MutableList<Cuenta>
+}
 
-    }
+class Cuenta() {
+
 }
