@@ -1,14 +1,16 @@
 package exBanco.bank
 
-import java.util.ArrayList
 import kotlin.collections.ArrayList
 
-class Cliente(nombre:String) {
-    private var nombre:String = nombre
+class Cliente(private var nombre: String) {
     private lateinit var id:String
-    private var ArrayList<Cuenta>: MutableList<Cuenta>
+    private var cuenta:ArrayList<Cuenta> = ArrayList()
 }
 
-class Cuenta() {
+class Cuenta(c: Cliente) {
+    private var cliente:ArrayList<Cliente> = ArrayList()
 
+    init {
+        cliente.add(c)
+    }
 }
